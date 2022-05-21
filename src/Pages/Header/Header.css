@@ -1,0 +1,17 @@
+.navbar {
+  box-shadow: 5px 0px 5px gray !important;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+   
+}
+.navbar-link {
+  color: rgb(109, 104, 104) !important;
+  font-size: 20px;
+}
+.btn {
+  background-color: #4676ef;
+  color: white;
+}
+.btn:hover {
+  color: white;
+}

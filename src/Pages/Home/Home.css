@@ -1,0 +1,29 @@
+.background {
+  background-image: url("../../image/banner1.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+
+  align-items: center;
+}
+.home-card {
+  background-color: #4676ef;
+  border-top: 12px solid #6c94f2;
+
+  color: white;
+  box-shadow: -10px 10px 0px #6c94f2;
+  font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.home-card h4,
+p {
+  display: inline;
+}
+
+.banner-card {
+  background-color: #4676ef;
+  color: white;
+}
