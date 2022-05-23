@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "../image/login-icon.png";
+import img from "../../image/login-icon.png";
 
 const Register = () => {
   return (
