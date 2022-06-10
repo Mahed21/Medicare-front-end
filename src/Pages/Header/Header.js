@@ -1,20 +1,37 @@
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import UseAuth from "../../Context/UseAuth";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMobileRetro, faClock } from "@fortawesome/free-solid-svg-icons";
 
 import "./Header.css";
 
 const Header = () => {
   const { user, Logout } = UseAuth();
+  const contact = <FontAwesomeIcon icon={faMobileRetro} />;
+  const watch = <FontAwesomeIcon icon={faClock} />;
+  //console.log(user);
 
   return (
     <div>
-      <Navbar bg="white" expand="lg" className="navbar">
+      <div className="first-navbar pb-2 pt-2">
+        <div className="container justify-content-between first-navbar-parent">
+          <div>
+            <h4>Medicare</h4>
+          </div>
+          <div className="first-navbar-text">
+            <h5>{contact} 01759704872</h5>
+            <h5 className="ms-4 first-nav-email">{watch} Sat-Thu :8AM-10PM</h5>
+          </div>
+        </div>
+      </div>
+
+      <Navbar bg="white" expand="lg" className="navbar pt-3 pb-3">
         <Container>
           <Navbar.Brand href="#home">Medicare</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="ms-auto">
               <Nav.Link href="/" className="navbar-link">
                 Home
               </Nav.Link>
@@ -27,11 +44,6 @@ const Header = () => {
               <Nav.Link href="#link" className="navbar-link">
                 Doctor
               </Nav.Link>
-              <Nav.Link href="#link" className="navbar-link">
-                News
-              </Nav.Link>
-            </Nav>
-            <Nav className="justify-content-end">
               <Nav.Link href="#home" className="navbar-link">
                 Contact Us
               </Nav.Link>

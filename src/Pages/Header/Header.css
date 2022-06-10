@@ -2,11 +2,13 @@
   box-shadow: 5px 0px 5px gray !important;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-   
 }
 .navbar-link {
   color: rgb(109, 104, 104) !important;
   font-size: 20px;
+}
+.navbar-link:hover {
+  color: #e6b59e !important;
 }
 .btn {
   background-color: #4676ef;
@@ -14,4 +16,24 @@
 }
 .btn:hover {
   color: white;
+}
+.first-navbar {
+  background-color: #f3f2f0;
+  color: rgb(173, 170, 170);
+}
+.navbar {
+  box-shadow: none !important;
+}
+.first-navbar-parent,
+.first-navbar-text {
+  display: flex;
+}
+@media (max-width: 940px) {
+  .first-navbar-parent,
+  .first-navbar-text {
+    display: block;
+  }
+  .first-nav-email {
+    margin-left: 0px !important;
+  }
 }
