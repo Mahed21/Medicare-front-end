@@ -27,3 +27,27 @@ p {
   background-color: #4676ef;
   color: white;
 }
+.description {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  position: relative;
+  height: 50vh;
+}
+.description-card {
+  background-color: #f3f2f0;
+  position: absolute;
+
+  top: -80px;
+}
+.description-text h5 {
+  color: rgb(153, 148, 148);
+}
+.description h3 {
+  color: #6f93ee;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+@media (max-width: 940px) {
+  .description {
+    height: 95vh;
+  }
+}

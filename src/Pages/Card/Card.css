@@ -1,0 +1,52 @@
+.doctor-card {
+  background-color: aliceblue;
+}
+.card-medicine {
+  position: relative;
+  background-color: white;
+  height: 53vh;
+  box-shadow: 0px 0px 20px rgb(199, 193, 193);
+}
+.btn1 {
+  position: absolute;
+  background-color: #4676ef;
+  color: white;
+  border: none;
+  bottom: 8px;
+}
+
+.contact {
+  background-image: url(../../image/banner.jpg);
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  background-size: cover;
+  color: white;
+  font-weight: bolder;
+  font-size: 15px;
+}
+.contact-number-row {
+  background-color: #322c29;
+  color: white;
+  position: absolute;
+  top: -60px;
+}
+.contact-number {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+}
+.icon {
+  color: #e6b59e;
+}
+
+@media (max-width: 940px) {
+  .card-medicine {
+    height: 80vh;
+  }
+  .contact-number {
+    height: 25vh;
+  }
+}

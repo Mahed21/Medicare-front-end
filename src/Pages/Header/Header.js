@@ -3,6 +3,7 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import UseAuth from "../../Context/UseAuth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMobileRetro, faClock } from "@fortawesome/free-solid-svg-icons";
+import logo from "../../image/logo.png";
 
 import "./Header.css";
 
@@ -20,15 +21,22 @@ const Header = () => {
             <h4>Medicare</h4>
           </div>
           <div className="first-navbar-text">
-            <h5>{contact} 01759704872</h5>
-            <h5 className="ms-4 first-nav-email">{watch} Sat-Thu :8AM-10PM</h5>
+            <h5>
+              <span className="icon">{contact} </span>01759704872
+            </h5>
+            <h5 className="ms-4 first-nav-email">
+              <span className="icon">{watch} </span> Sat-Thu :8AM-10PM
+            </h5>
           </div>
         </div>
       </div>
 
       <Navbar bg="white" expand="lg" className="navbar pt-3 pb-3">
         <Container>
-          <Navbar.Brand href="#home">Medicare</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <img src={logo} className="" alt="" />
+            Medicare
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">

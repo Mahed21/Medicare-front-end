@@ -1,6 +1,8 @@
 import React from "react";
 import "./Home.css";
-import img from "../../image/doctor1.png";
+
+import img1 from "../../image/patient.png";
+import Card from "../Card/Card";
 
 const Home = () => {
   return (
@@ -21,48 +23,30 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* banner */}
-      <div className="container mt-5">
-        <div className="row row-cols-lg-3">
+      {/* description */}
+      <div className="container description">
+        <div className="row row-cols-lg-2 description-card">
           <div>
-            <img src={img} alt="" />
+            <img src={img1} className="img-fluid w-100" alt="" />
           </div>
-          <div className="col mt-5">
-            <h4 className="mb-4">Welcome to Medicare Central Hospital</h4>
-            <p className="">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              <br />
-            </p>
-          </div>
-          <div>
-            <div className="banner-card mt-5 pt-3 pb-3 text-center">
-              <h4>Request Appointment</h4>
-            </div>
-            <div className="banner-card mt-2 pt-3 pb-3 text-center">
-              <h4>Find Doctor</h4>
-            </div>
-            <div className="banner-card mt-2 pt-3 pb-3 text-center">
-              <h4>Find Location</h4>
-            </div>
-            <div className="banner-card mt-2 pt-3 pb-3 text-center">
-              <h4>Emergency services</h4>
-            </div>
+          <div className="text-center  description-text mt-5">
+            <h1>Professional Care You </h1>
+            <h1>Can Trust</h1>
+            <h3 className="mt-3">We Provide Care</h3>
+            <h5 className="mt-5">
+              We trace our success as a company to the simple and enduring
+              philosophy that aging is a gift. The wealth of knowledge and
+              experience that comes with age is a gift to the individual & the
+              family.
+            </h5>
+            <h5>
+              We work to provide an environment that supports the whole person
+              mind and heart, as well as body.
+            </h5>
           </div>
         </div>
       </div>
+      <Card></Card>
     </div>
   );
 };
