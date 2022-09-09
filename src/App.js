@@ -1,4 +1,6 @@
 import logo from "./logo.svg";
+import "antd/dist/antd.css";
+import "@progress/kendo-theme-material/dist/all.css";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Header from "./Pages/Header/Header";
@@ -11,6 +13,8 @@ import Footer from "./Pages/Footer/Footer";
 import Contact from "./Pages/Contact/Contact";
 import Doctors from "./Pages/DepartmentDoctors/Doctors";
 import Information from "./Pages/VeiwDoctorsInfo/Information";
+import Bookticket from "./Pages/VeiwDoctorsInfo/Bookticket";
+import PatientList from "./Pages/VeiwDoctorsInfo/PatientList/PatientList";
 
 function App() {
   return (
@@ -26,6 +30,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/doctors" element={<Doctors />} />
           <Route path="/doctors" element={<Information />} />
+          <Route path="/bookTicket" element={<Bookticket />} />
+          <Route path="/patientList" element={<PatientList />} />
         </Routes>
         <Footer></Footer>
       </AuthProvider>

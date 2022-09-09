@@ -1,0 +1,9 @@
+.datepicker {
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #4676ef;
+  color: #4676ef;
+}
+::placeholder {
+  color: #4676ef;
+}

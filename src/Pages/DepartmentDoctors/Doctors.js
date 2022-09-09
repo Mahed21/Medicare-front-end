@@ -5,7 +5,7 @@ import "./Doctors.css";
 const Doctors = () => {
   const [information, setInformation] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/doctor")
+    fetch("https://radiant-coast-34791.herokuapp.com/doctor")
       .then((res) => res.json())
       .then((data) => setInformation(data));
   }, []);
