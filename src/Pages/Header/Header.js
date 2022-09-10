@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import UseAuth from "../../Context/UseAuth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,9 +9,9 @@ import "./Header.css";
 
 const Header = () => {
   const { user, Logout } = UseAuth();
+  const [isAdmin, setIsAdmin] = useState(false);
   const contact = <FontAwesomeIcon icon={faMobileRetro} />;
   const watch = <FontAwesomeIcon icon={faClock} />;
-  //console.log(user);
 
   return (
     <div>
@@ -43,18 +43,17 @@ const Header = () => {
               <Nav.Link href="/" className="navbar-link">
                 Home
               </Nav.Link>
-              <Nav.Link href="#link" className="navbar-link">
-                About Us
-              </Nav.Link>
-              <Nav.Link href="#link" className="navbar-link">
-                Medical Services
-              </Nav.Link>
-              <Nav.Link href="#link" className="navbar-link">
-                Doctor
-              </Nav.Link>
-              <Nav.Link href="#home" className="navbar-link">
-                Contact Us
-              </Nav.Link>
+
+              {user.email === "mahed255261@gmail.com" ? (
+                <div>
+                  <Nav.Link href="/manage" className="navbar-link">
+                    Manage Patient
+                  </Nav.Link>
+                </div>
+              ) : (
+                ""
+              )}
+
               {user.email ? (
                 <Nav.Link href="/login">
                   <button className="btn" onClick={Logout}>

@@ -14,8 +14,8 @@ const Contact = () => {
   return (
     <div className=" container mt-5">
       <div className="row row-cols-lg-2">
-        <div>
-          <LoadScript googleMapsApiKey="your api">
+        <div className="">
+          <LoadScript googleMapsApiKey="your api code">
             <GoogleMap
               mapContainerStyle={containerStyle}
               center={center}

@@ -15,6 +15,9 @@ import Doctors from "./Pages/DepartmentDoctors/Doctors";
 import Information from "./Pages/VeiwDoctorsInfo/Information";
 import Bookticket from "./Pages/VeiwDoctorsInfo/Bookticket";
 import PatientList from "./Pages/VeiwDoctorsInfo/PatientList/PatientList";
+import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
+import ManagePatient from "./Pages/Admin/ManagePatient/ManagePatient";
+import PatientData from "./Pages/Admin/PatientData.js/PatientData";
 
 function App() {
   return (
@@ -28,10 +31,20 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/card" element={<Card />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/doctors" element={<Doctors />} />
+          <Route
+            path="/doctors"
+            element={
+              <PrivateRoute>
+                <Doctors />
+              </PrivateRoute>
+            }
+          />
+
           <Route path="/doctors" element={<Information />} />
           <Route path="/bookTicket" element={<Bookticket />} />
           <Route path="/patientList" element={<PatientList />} />
+          <Route path="/manage" element={<ManagePatient />} />
+          <Route path="/patientData" element={<PatientData />} />
         </Routes>
         <Footer></Footer>
       </AuthProvider>

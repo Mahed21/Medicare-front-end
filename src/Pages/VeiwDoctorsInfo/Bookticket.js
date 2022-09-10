@@ -9,10 +9,10 @@ import moment from "moment";
 const Bookticket = () => {
   const [date, setDate] = useState(new Date());
   const { user } = UseAuth();
-  // let newObject = JSON.parse(localStorage.getItem("myObject"));
+
   const navigate = useNavigate();
   const location = useLocation();
-  let img = location.state.img;
+
   let name = location.state.name;
   let time = location.state.time;
   let email = user.email;
@@ -21,7 +21,6 @@ const Bookticket = () => {
 
   const [number, setNumber] = useState({});
 
-  const [patient, setPatient] = useState([]);
   const [patientName, setPatientName] = useState([]);
   const numberChange = (e) => {
     setNumber(e.target.value);
@@ -35,15 +34,6 @@ const Bookticket = () => {
 
     setDate(moment(e._d).format("MMM Do YY"));
   };
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/patient")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       const datas = data.filter((data) => data.date === date);
-  //       console.log(datas);
-  //       setPatient(datas);
-  //     });
-  // }, []);
 
   const savePatientInfo = (e) => {
     e.preventDefault();
@@ -59,32 +49,17 @@ const Bookticket = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          navigate("/");
           alert("successfully collected");
+          navigate("/");
         }
       });
   };
 
   return (
     <div className="">
-      {/* <table>
-        <tr>
-          <th>Patinet Name</th>
-          <th>Email</th>
-          <th>Phone Number</th>
-          <th>
-            <button>pendin</button>
-          </th>
-        </tr>
-
-        {patient.map((patients) => (
-          <ViewAllPatient data={patients} key={patients._id}></ViewAllPatient>
-        ))}
-      </table> */}
-
       <div className=" pt-5 container">
         <div className="container doctor-profile mt-5">
-          <form>
+          <form onSubmit={savePatientInfo}>
             <h3>Appointment Form</h3>
             <div className="input-text">
               <input type="text" className="mb-3 w-50" value={name} />
@@ -106,27 +81,23 @@ const Bookticket = () => {
                 required
               />
               <br />
-              {/* <input
-                type="text"
-                placeholder="Enter Date 01/12/22"
-                className="mb-3"
-                onBlur={dateChange}
-                required
-              /> */}
             </div>
 
             <br />
             <br />
+
             <DatePicker
               //value={date}
               onChange={dateChange}
+              // value={moment(date).format("MMM Do YY")}
               // className="w-100 datepicker"
             ></DatePicker>
             <br />
             <br />
-            <button className="btn" onClick={savePatientInfo}>
+            <input type="submit" value="Book" className="btn" />
+            {/* <button className="btn" onClick={savePatientInfo}>
               Book{" "}
-            </button>
+            </button> */}
           </form>
         </div>
       </div>
